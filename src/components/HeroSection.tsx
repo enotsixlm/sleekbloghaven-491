@@ -16,9 +16,6 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto"
         >
-          <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium tracking-wider text-secondary-dark rounded-none bg-secondary">
-            Welcome to my blog
-          </span>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight uppercase">
             Wanaka, Create, build and fun
           </h1>
