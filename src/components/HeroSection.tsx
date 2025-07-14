@@ -20,7 +20,7 @@ const HeroSection = () => {
             Welcome to my blog
           </span>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight uppercase">
-            Exploring Design, Technology, and Innovation
+            Wanaka, Create, build and fun
           </h1>
           <p className="text-lg md:text-xl text-white/80 mb-8">
             Join me on a journey through the intersection of design and technology, where simplicity meets innovation.
