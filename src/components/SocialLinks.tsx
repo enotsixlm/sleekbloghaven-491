@@ -1,22 +1,21 @@
 
-import { Linkedin, Youtube } from "lucide-react";
-import { FaTiktok } from "react-icons/fa";
+import { FaTiktok, FaInstagram, FaDiscord } from "react-icons/fa";
 
 const socialLinks = [
   {
     name: "TikTok",
     icon: FaTiktok,
-    url: "https://tiktok.com",
+    url: "https://www.tiktok.com/@wanaka_world?_t=ZM-90yiHhLYDeq&_r=1",
   },
   {
-    name: "LinkedIn",
-    icon: Linkedin,
-    url: "https://linkedin.com",
+    name: "Instagram",
+    icon: FaInstagram,
+    url: "https://www.instagram.com/wanaka_wow?igsh=aTRuM3FyaDFsaXNv",
   },
   {
-    name: "YouTube",
-    icon: Youtube,
-    url: "https://youtube.com",
+    name: "Discord",
+    icon: FaDiscord,
+    url: "https://discord.gg/quJN7hUxdh",
   },
 ];
 
