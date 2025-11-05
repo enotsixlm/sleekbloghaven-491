@@ -1,11 +1,11 @@
 
-import { Twitter, Linkedin, Youtube } from "lucide-react";
+import { Twitter, Linkedin, Youtube, MessageCircle } from "lucide-react";
 
 const socialLinks = [
   {
-    name: "Twitter",
-    icon: Twitter,
-    url: "https://twitter.com",
+    name: "Discord",
+    icon: MessageCircle,
+    url: "https://discord.com",
   },
   {
     name: "LinkedIn",
