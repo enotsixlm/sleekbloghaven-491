@@ -14,14 +14,8 @@ const ProductLinks = () => {
     url: "https://apps.apple.com/us/app/wanaka/id6749002333",
     icon: Smartphone
   }];
-  return <section className="relative py-20 bg-gradient-to-b from-secondary/5 via-primary/5 to-background overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-      </div>
-
-      <div className="container px-4 mx-auto relative z-10">
+  return <section className="py-20 bg-background relative overflow-hidden">
+      <div className="container px-4 mx-auto">
         <motion.div initial={{
         opacity: 0,
         y: 20
@@ -33,57 +27,45 @@ const ProductLinks = () => {
       }} transition={{
         duration: 0.6
       }} className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-muted">
-            Our Products
-          </h2>
-          <p className="text-muted-foreground text-lg">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Products</h2>
+          <p className="text-muted-foreground">
             Discover our platforms and applications
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {products.map((product, index) => {
           const Icon = product.icon;
+          const isFirst = index === 0;
           return <motion.a key={product.id} href={product.url} target="_blank" rel="noopener noreferrer" initial={{
             opacity: 0,
-            y: 30,
-            scale: 0.95
+            x: isFirst ? -50 : 50
           }} whileInView={{
             opacity: 1,
-            y: 0,
-            scale: 1
+            x: 0
           }} viewport={{
             once: true
           }} transition={{
-            duration: 0.7,
-            delay: index * 0.15,
+            duration: 0.8,
+            delay: index * 0.2,
             type: "spring",
-            stiffness: 100
+            stiffness: 80
           }} whileHover={{
-            y: -8,
-            scale: 1.02
-          }} className="group relative overflow-hidden rounded-2xl bg-card p-10 transition-all duration-500 border-2 border-border hover:border-primary/50 shadow-lg hover:shadow-2xl hover:shadow-primary/20">
-                {/* Card gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
-                {/* Animated corner accent */}
-                <div className="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-bl-full transform translate-x-12 -translate-y-12 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500" />
+            scale: 1.05
+          }} className="group relative overflow-hidden rounded-xl bg-card p-8 transition-all duration-300 border-2 border-border hover:border-primary">
+                {/* Animated background gradient on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/0 group-hover:from-primary/5 group-hover:to-transparent transition-all duration-500" />
                 
                 <div className="flex flex-col items-center text-center relative z-10">
-                  <motion.div 
-                    whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
-                    transition={{ duration: 0.5 }}
-                    className="mb-6 p-5 rounded-2xl bg-gradient-to-br from-primary/20 to-primary-muted/20 group-hover:from-primary/30 group-hover:to-primary-muted/30 transition-all duration-500 shadow-lg"
-                  >
-                    <Icon className="h-10 w-10 text-primary" />
-                  </motion.div>
-                  
-                  <h3 className="text-2xl font-bold text-card-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                  <div className="mb-6 p-6 rounded-full bg-primary/10 group-hover:bg-primary transition-all duration-300">
+                    <Icon className="h-10 w-10 text-primary group-hover:text-white transition-colors duration-300" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-card-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                     {product.title}
                   </h3>
                   
-                  <div className="inline-flex items-center text-primary font-semibold group-hover:gap-3 gap-2 transition-all duration-300">
-                    Visit <ExternalLink className="h-4 w-4 group-hover:rotate-45 transition-transform duration-300" />
+                  <div className="inline-flex items-center gap-2 text-primary font-medium">
+                    Visit <ExternalLink className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                   </div>
                 </div>
               </motion.a>;
