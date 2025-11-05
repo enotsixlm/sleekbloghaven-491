@@ -27,8 +27,8 @@ const ProductLinks = () => {
       }} transition={{
         duration: 0.6
       }} className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Products</h2>
-          <p className="text-muted-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-50">Our Products</h2>
+          <p className="text-muted-foreground text-slate-50">
             Discover our platforms and applications
           </p>
         </motion.div>

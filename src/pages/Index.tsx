@@ -7,7 +7,7 @@ import ProductLinks from "@/components/ProductLinks";
 const Index = () => {
   return <main className="min-h-screen bg-background">
       <HeroSection />
-      <ProductLinks />
+      <ProductLinks className="bg-primary-muted" />
       
       
       
