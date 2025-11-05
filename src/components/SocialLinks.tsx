@@ -1,10 +1,11 @@
 
-import { Twitter, Linkedin, Youtube, MessageCircle } from "lucide-react";
+import { Linkedin, Youtube } from "lucide-react";
+import { FaDiscord } from "react-icons/fa";
 
 const socialLinks = [
   {
     name: "Discord",
-    icon: MessageCircle,
+    icon: FaDiscord,
     url: "https://discord.com",
   },
   {
