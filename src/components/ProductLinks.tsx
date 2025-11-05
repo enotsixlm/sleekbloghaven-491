@@ -3,7 +3,7 @@ import { ExternalLink, Smartphone } from "lucide-react";
 const ProductLinks = () => {
   const products = [{
     id: 1,
-    title: "Wanaka Fun",
+    title: "Wanaka Studio",
     description: "Explore our web platform",
     url: "https://www.wanaka.fun",
     icon: ExternalLink
