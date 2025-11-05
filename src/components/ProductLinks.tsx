@@ -1,18 +1,18 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Smartphone } from "lucide-react";
+import { ExternalLink, Sparkles, AppWindow } from "lucide-react";
 const ProductLinks = () => {
   const products = [{
     id: 1,
     title: "Wanaka Studio",
     description: "Explore our web platform",
     url: "https://www.wanaka.fun",
-    icon: ExternalLink
+    icon: Sparkles
   }, {
     id: 2,
     title: "Wanaka App",
     description: "Download on the App Store",
     url: "https://apps.apple.com/us/app/wanaka/id6749002333",
-    icon: Smartphone
+    icon: AppWindow
   }];
   return <section className="py-20 bg-background relative overflow-hidden">
       <div className="container px-4 mx-auto">
