@@ -1,12 +1,12 @@
 
 import { Linkedin, Youtube } from "lucide-react";
-import { FaDiscord } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
 
 const socialLinks = [
   {
-    name: "Discord",
-    icon: FaDiscord,
-    url: "https://discord.com",
+    name: "TikTok",
+    icon: FaTiktok,
+    url: "https://tiktok.com",
   },
   {
     name: "LinkedIn",
