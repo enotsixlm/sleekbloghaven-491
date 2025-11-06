@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Sparkles, AppWindow } from "lucide-react";
-const ProductLinks = () => {
+import { ExternalLink, Palette, AppWindow } from "lucide-react";
+const ProductLinks = ({ className }: { className?: string }) => {
   const products = [{
     id: 1,
     title: "Wanaka Studio",
     description: "Explore our web platform",
     url: "https://www.wanaka.fun",
-    icon: Sparkles
+    icon: Palette
   }, {
     id: 2,
     title: "Wanaka App",
@@ -14,7 +14,7 @@ const ProductLinks = () => {
     url: "https://apps.apple.com/us/app/wanaka/id6749002333",
     icon: AppWindow
   }];
-  return <section className="py-20 bg-background relative overflow-hidden">
+  return <section className={`py-20 bg-background relative overflow-hidden ${className || ''}`}>
       <div className="container px-4 mx-auto">
         <motion.div initial={{
         opacity: 0,
